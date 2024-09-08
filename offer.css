@@ -1,0 +1,223 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color: #132E32;
+    --secondary-bg-color: #0A2239;
+    --tertiary-color: #176087;
+    --secondary-color: #1D84B5;
+    --main-color: #53A2BE;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
+    font-size: 1.2rem;
+    padding-top: 60px;
+    height: 100vh;
+    font-family: "Raleway", sans-serif;
+    
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondary-bg-color);
+    padding: 12px 16px;
+    color: var(--secondary-color);
+    border-radius: 0 0 20px 20px;
+    z-index: 1;
+}
+
+
+main {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.intro {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    padding: 40px 48px;
+    border-radius: 0 20px 0 20px;
+    box-shadow: 0 0 10px var(--tertiary-color);
+    position: relative;
+}
+
+.intro input {
+    padding: 8px 12px;
+    width: 60%;
+    animation: radius 4s infinite normal ease-in-out;
+    margin-bottom: 25px;
+}
+
+
+
+@keyframes radius {
+    0% {
+      border-radius: 20px;
+    }
+    25% {
+        border-radius: 0 20px 20px 20px;
+    }
+    50% {
+        border-radius:  20px 0 20px 20px;
+    }
+    75% {
+        border-radius: 20px 20px 0 20px;
+    }
+    100% {
+        border-radius: 20px 20px 20px 0;
+    }
+   
+}
+
+.intro span {
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1.1;
+}
+
+.intro button {
+    width: 40%;
+    padding: 8px 12px;
+    border-radius: 0 20px 0 20px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: var(--main-color);
+    color: var(--main-bg-color);
+    border: 1px solid transparent;
+    font-weight: bold;
+}
+
+.intro button:active {
+    background-color: var(--tertiary-color)
+}
+
+
+.first {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 12px 16px 60px;
+    box-shadow: 0 0 10px var(--secondary-bg-color);
+    border-radius: 0 20px 0 20px;
+    width: 80%;
+    position: relative;
+    
+}
+
+.first button {
+    width: 40%;
+    padding: 8px 12px;
+    border-radius: 0 20px 0 20px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: var(--main-color);
+    color: var(--main-bg-color);
+    border: 1px solid transparent;
+    font-weight: bold;
+}
+
+.first button:active {
+    background-color: var(--tertiary-color)
+}
+
+
+.container {
+    display: none;
+    
+}
+
+.swiper {
+    
+    margin-top: 100px;
+    width: 80%;
+    height: 270px;
+    position: relative;
+}
+
+.swiper-slide div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.swiper .swipe {
+    color: var(--secondary-color);
+    position: absolute;
+    right: 20px;
+    bottom: 25px;
+}
+
+.swiper-slide p {
+    margin: 10px 0;
+}
+
+.name {
+    color: var(--main-color);
+    text-shadow: 0 0 3px gold;
+}
+
+.final {
+    position: relative;
+}
+
+.final i {
+    color: red;
+}
+
+.final-link {
+    text-decoration: none;
+    padding: 12px 20px;
+    background-color: var(--tertiary-color);
+    color: var(--secondary-bg-color);
+    border-radius: 0 20px 0 20px;
+    position: absolute;
+    bottom: 35px;
+    right: 25px;
+    animation: float 3s infinite ease normal;
+}
+
+@keyframes float {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.2, 1.2);
+        box-shadow: 0 0 10px gold;
+         color: var(--tertiary-color);
+    background-color: var(--secondary-bg-color);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.final-link:active {
+    color: var(--tertiary-color);
+    background-color: var(--secondary-bg-color);
+}
